@@ -1,5 +1,5 @@
 name: angrysearch # you probably want to 'snapcraft register <name>'
-version: git
+version:  '1.0.2'
 summary: ANGRYsearch, a fast search tool for Linux
 description: |
   ANGRYsearch is a tool written in Python and designed to show search results 
@@ -11,6 +11,14 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 apps:
     angrysearch:
         command: bin/angrysearch
+        command: desktop-launch application
+        plugs: 
+        - unity7
+        - home
+        - desktop
+        - desktop-legacy
+        - wayland
+        desktop: usr/share/applications/angrysearch.desktop
 
 parts:
 
@@ -19,5 +27,5 @@ parts:
     source-type: git
     plugin: python
 
-    build-packages:
+    stage-packages:
       - python3-pyqt5
