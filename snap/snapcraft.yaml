@@ -27,5 +27,5 @@ parts:
     source-type: git
     plugin: python
 
-    stage-packages:
+    build-packages:
       - python3-pyqt5
