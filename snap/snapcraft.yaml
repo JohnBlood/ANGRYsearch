@@ -11,14 +11,14 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 apps:
     angrysearch:
         command: bin/angrysearch
-        command: desktop-launch application
         plugs: 
         - unity7
         - home
         - desktop
         - desktop-legacy
         - wayland
-        desktop: usr/share/applications/angrysearch.desktop
+        - x11
+
 
 parts:
 
